@@ -17,11 +17,7 @@ fn main() {
     let img = image::open(&Path::new(&file)).unwrap();
 
     let result = img.pixels().into_iter().fold(0, |acc, (x, y, pixel)| {
-        acc + ((x + 1) / (y + 1))
-            + pixel[0] as u32
-            + pixel[1] as u32
-            + pixel[2] as u32
-            + pixel[3] as u32
+        acc + pixel[0] as u128 * pixel[1] as u128 * pixel[2] as u128 * pixel[3] as u128
     });
 
     println!("Result: {}", result);
