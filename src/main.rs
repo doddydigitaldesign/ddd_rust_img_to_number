@@ -2,6 +2,7 @@ extern crate image;
 
 use image::GenericImageView;
 use std::env;
+use std::fs;
 use std::path::Path;
 
 fn main() {
@@ -19,4 +20,15 @@ fn main() {
     });
 
     println!("Result: {}", result);
+    generate_output(result);
+}
+
+fn generate_output(res: u128) {
+    if !Path::new("output/").exists() {
+        fs::create_dir("output/").unwrap();
+    }
+    let mut out_file: String = String::from("output/");
+    out_file.push_str(&res.to_string());
+    out_file.push_str(".txt");
+    fs::write(&out_file, res.to_string()).unwrap();
 }
