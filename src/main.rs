@@ -1,7 +1,5 @@
-extern crate clap;
 extern crate image;
 
-// use clap::{App, Arg, SubCommand};
 use image::GenericImageView;
 use std::env;
 use std::path::Path;
@@ -16,7 +14,7 @@ fn main() {
 
     let img = image::open(&Path::new(&file)).unwrap();
 
-    let result = img.pixels().into_iter().fold(0, |acc, (x, y, pixel)| {
+    let result = img.pixels().into_iter().fold(0, |acc, (_x, _y, pixel)| {
         acc + pixel[0] as u128 * pixel[1] as u128 * pixel[2] as u128 * pixel[3] as u128
     });
 
