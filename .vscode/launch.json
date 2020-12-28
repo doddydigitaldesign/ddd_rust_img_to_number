@@ -19,9 +19,7 @@
                     "kind": "bin"
                 }
             },
-            "args": [
-                "--file E:/dev/Rust/ddd_rust_img_to_number/mock/my_image1.webp"
-            ],
+            "args": [],
             "cwd": "${workspaceFolder}"
         },
         {
