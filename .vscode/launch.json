@@ -11,7 +11,7 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=ddd_rust_img_to_number",
+                    "--bin=ddd_rust_img_to_number/examples/simple",
                     "--package=ddd_rust_img_to_number"
                 ],
                 "filter": {
