@@ -1,7 +1,3 @@
-use std::collections::hash_map::DefaultHasher;
-use std::hash::{Hash, Hasher};
-use std::path::Path;
-
 use ddd_rust_img_to_number::img_to_number;
 
 fn main() {
