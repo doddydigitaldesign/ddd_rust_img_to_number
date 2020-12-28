@@ -32,9 +32,16 @@ mod tests {
     }
 
     #[test]
-    fn it_parses_correctly() {
-        let mut mock_file = String::from("./mock/my_image.webp");
+    fn it_parses_imagefiles_correctly() {
+        let mut mock_file = String::from("./mock/imagefile.png");
         let result = img_to_number(&mut mock_file);
-        assert_eq!(result.unwrap(), 9373154758004062098u64);
+        assert_eq!(result.unwrap(), 16483649873581620343);
+    }
+
+    #[test]
+    fn it_parses_textfiles_correctly() {
+        let mut mock_file = String::from("./mock/textfile.txt");
+        let result = img_to_number(&mut mock_file);
+        assert_eq!(result.unwrap(), 17875805651733834705);
     }
 }
